@@ -1,7 +1,6 @@
 [user]
-  name = Chip Wolf
-  email = chip.wolf@control-plane.io
-  signingkey = 0x4C90101E11349775
+  name = coraline33od
+  email = 61751247+coraline33od@users.noreply.github.com
 [color]
   ui = true
 [core]
@@ -14,11 +13,11 @@
   mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
   count-lines = "! git log --author=\"$1\" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf \"added lines: %s, removed lines: %s, total lines: %s\\n\", add, subs, loc }' #"
 [github]
-  user = chipwolf
+  user = coraline33od
 [gpg]
   program = gpg
 [commit]
-  gpgsign = true
+  gpgsign = false
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
