@@ -7,15 +7,11 @@
 
 # brew "age-plugin-yubikey"
 brew "antidote" # zsh plugin manager
-brew "asitop" if OS.mac? # apple silicon top
-brew "aws-vault" unless ENV["HOMEBREW_CODESPACES"]
-brew "awscli" unless ENV["HOMEBREW_CODESPACES"]
 brew "bash" unless ENV["HOMEBREW_CODESPACES"]
 brew "bat" # better cat
 brew "beads" # beads CLI for opencode-beads plugin
-brew "blueutil" if OS.mac?
-brew "btop" unless ENV["HOMEBREW_CODESPACES"]
-brew "cbonsai" unless ENV["HOMEBREW_CODESPACES"] if ENV["HOMEBREW_PRIVATE"]
+brew "blueutil" if OS.mac? # control bluetooth by alfred
+brew "btop" unless ENV["HOMEBREW_CODESPACES"] # better top
 brew "chezmoi"
 brew "colima" unless ENV["HOMEBREW_CODESPACES"]
 brew "colordiff" unless ENV["HOMEBREW_CODESPACES"]
@@ -26,12 +22,9 @@ brew "fd" unless ENV["HOMEBREW_CODESPACES"] # nvim mason dep
 brew "fzf" # fuzzy finder
 brew "gh" unless ENV["HOMEBREW_CODESPACES"]
 brew "git" unless ENV["HOMEBREW_CODESPACES"]
-# brew "gmp"
-# brew "gnupg"
 brew "htop" unless ENV["HOMEBREW_CODESPACES"]
 brew "k9s"
 brew "kubernetes-cli" unless ENV["HOMEBREW_CODESPACES"]
-# brew "libyaml"
 brew "mas" if OS.mac? # mac app store
 brew "mise" # mise-en-place
 brew "neovim" unless ENV["HOMEBREW_CODESPACES"]
@@ -42,7 +35,7 @@ brew "parallel" unless ENV["HOMEBREW_CODESPACES"]
 # brew "rage" # better age
 brew "ripgrep"
 brew "sevenzip" unless ENV["HOMEBREW_CODESPACES"]
-brew "thefuck" unless ENV["HOMEBREW_CODESPACES"]
+brew "thefuck" unless ENV["HOMEBREW_CODESPACES"] # fixes typos on previous commands
 brew "timg" unless ENV["HOMEBREW_CODESPACES"] # terminal image/video viewer (kitty graphics)
 brew "tmux" unless ENV["HOMEBREW_CODESPACES"]
 brew "tree"
@@ -60,18 +53,13 @@ cask "alfred" if OS.mac? # better spotlight
 cask "amethyst" if OS.mac? # tiling wm
 cask "cursor" if OS.mac? && ENV["HOMEBREW_PRIVATE"]
 # cask "element" if OS.mac? # matrix chat
-cask "eqmac" if OS.mac?
-cask "finicky" if OS.mac?
 cask "font-fira-code-nerd-font" if OS.mac?
 cask "font-symbols-only-nerd-font" if OS.mac?
-cask "gcloud-cli" if OS.mac?
 cask "ghostty" if OS.mac?
 # cask "google-drive" if OS.mac?
 # cask "gpg-suite" if OS.mac?
-cask "iterm2" if OS.mac? # better terminal
 cask "jordanbaird-ice" if OS.mac? # menu bar
 # cask "lm-studio" if OS.mac?
-cask "lookaway" if OS.mac? # screen breaks
 cask "lulu" if OS.mac? && ENV["HOMEBREW_PRIVATE"] # firewall
 # cask "macwhisper" if OS.mac?
 cask "obsidian" if OS.mac?

@@ -30,4 +30,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/chipwolf/dotfiles:latest
+          tags: ghcr.io/coraline33od/dotfiles:latest

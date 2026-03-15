@@ -15,7 +15,7 @@ if [ -n "${CODESPACES:-}" ]; then
       | tar -xz -C /tmp/_crane crane
     CRANE=/tmp/_crane/crane
 
-    OUR_IMAGE="ghcr.io/chipwolf/dotfiles:latest"
+    OUR_IMAGE="ghcr.io/coraline33od/dotfiles:latest"
     BASE_IMAGE="mcr.microsoft.com/devcontainers/universal:latest"
 
     OUR_LAYERS=$("$CRANE" manifest "$OUR_IMAGE" | jq -r '.layers[].digest')
