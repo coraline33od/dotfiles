@@ -6,6 +6,7 @@
 # - Commented-out lines are intentionally excluded (broken, unwanted, or deferred).
 
 # brew "age-plugin-yubikey"
+brew "anomalyco/tap/opencode"
 brew "antidote" # zsh plugin manager
 brew "bash" unless ENV["HOMEBREW_CODESPACES"]
 brew "bat" # better cat
@@ -19,6 +20,7 @@ brew "docker" unless ENV["HOMEBREW_CODESPACES"]
 brew "docker-compose" unless ENV["HOMEBREW_CODESPACES"]
 brew "eza" # better ls
 brew "fd" unless ENV["HOMEBREW_CODESPACES"] # nvim mason dep
+brew "ffmpeg" # dependency for timg
 brew "fzf" # fuzzy finder
 brew "gh" unless ENV["HOMEBREW_CODESPACES"]
 brew "git" unless ENV["HOMEBREW_CODESPACES"]
@@ -51,6 +53,7 @@ cask "1password" if OS.mac? # work
 cask "1password-cli" if OS.mac? # work
 cask "alfred" if OS.mac? # better spotlight
 cask "amethyst" if OS.mac? # tiling wm
+cask "claude-code"
 cask "cursor" if OS.mac? && ENV["HOMEBREW_PRIVATE"]
 # cask "element" if OS.mac? # matrix chat
 cask "font-fira-code-nerd-font" if OS.mac?
@@ -63,12 +66,16 @@ cask "jordanbaird-ice" if OS.mac? # menu bar
 cask "lulu" if OS.mac? && ENV["HOMEBREW_PRIVATE"] # firewall
 # cask "macwhisper" if OS.mac?
 cask "obsidian" if OS.mac?
+cask "prismlauncher"
 cask "shadow" if OS.mac? && ENV["HOMEBREW_PRIVATE"]
 # cask "slack" if OS.mac?
 cask "visual-studio-code" if OS.mac?
+cask "vscodium"
 cask "wakatime" if OS.mac?
 cask "xscreensaver" if OS.mac?
 # cask "yubico-authenticator" if OS.mac?
+cask "zerotier-one"
 # cask "zoom" if OS.mac?
 mas "Fantastical", id: 975937182 if OS.mac? && $stdin.tty?
 mas "Irvue", id: 1039633667 if OS.mac? && $stdin.tty?
+tap "anomalyco/tap"
