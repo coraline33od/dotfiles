@@ -1,9 +1,6 @@
 *.swp
 .DS_Store
 **/*.local.*
-home/dot_config/opencode/private_mcp-atlassian.env
-home/dot_config/opencode/private_slack-mcp.env
-home/dot_config/opencode/skills/onw-monthly-tickets/SKILL.md
 
 # Dolt database files (added by bd init)
 .dolt/
