@@ -63,6 +63,9 @@ Four specialised subagents handle common delegated tasks. Use them instead of do
 | `@daily-note` | Logging achievements or action items to today's Obsidian daily note |
 | `@beads-task-agent` | Any beads operation requiring 2+ `bd` commands: status overviews, finding and completing ready work, exploring the issue graph, multi-issue sequences |
 
+- When delegating to `@dotfiles`, make the request bounded and prescriptive: specify the exact chezmoi-managed file or files, the exact intended change, constraints on unrelated edits, and whether `chezmoi apply`, commit, and push are desired.
+- If a `@dotfiles` delegation is not specific enough to execute as a bounded file edit safely, it must stop and return an insufficiently prescriptive result instead of exploring broadly.
+
 When subagent delegations are needed at session close (config changes, memory updates, daily note logging), run them in sequence rather than inline: delegate each concern to its subagent one at a time, wait for each to complete, then proceed to the next. This keeps the primary agent's context clean and each concern isolated.
 
 If a delegated exploration task aborts or returns no useful result for a bounded repo-inspection task, fall back to direct `glob`, `grep`, `read`, and targeted `bash` calls instead of retrying the same broad delegation blindly.
