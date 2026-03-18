@@ -100,6 +100,12 @@ If a rule in global memory is actually project-specific, move it to the relevant
 
 When something is achieved during a session (a task completed, a ticket updated, a document published, etc.), ask the user first whether they want it logged to their daily note. Only delegate to the `@daily-note` subagent after the user confirms. Never log proactively or assume the user wants a log entry, even at session end.
 
+Daily note conventions:
+- Do not add an H1 heading with the date; the filename already conveys it.
+- Do not use daily notes as a task tracker. Only log what has been completed.
+- Group entries under H2 headings that link to the relevant project note (e.g. `## [[Projects/foo/Bar|Bar]]`).
+- Keep entries as plain bullet points describing accomplishments.
+
 ---
 
 ## Post-task retrospective and self-improvement

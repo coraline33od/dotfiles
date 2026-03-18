@@ -59,6 +59,7 @@ cask "cursor" if OS.mac? && ENV["HOMEBREW_PRIVATE"]
 cask "font-fira-code-nerd-font" if OS.mac?
 cask "font-symbols-only-nerd-font" if OS.mac?
 cask "ghostty" if OS.mac?
+cask "google-chrome" if OS.mac?
 # cask "google-drive" if OS.mac?
 # cask "gpg-suite" if OS.mac?
 cask "jordanbaird-ice" if OS.mac? # menu bar
