@@ -105,6 +105,7 @@ Deleting a file from the chezmoi source does **not** remove it from the target (
 - Prefer declaring removals in `.chezmoiremove` when retiring a previously managed target.
 - When a deployed file is stale because its source entry was removed or renamed, default to `.chezmoiremove` or another documented chezmoi removal mechanism before touching the target path directly.
 - Use other documented chezmoi removal semantics only when they are a better fit for the target type.
+- Do not add a path to `.chezmoiremove` for source entries that were never committed or previously deployed. Use `.chezmoiremove` only when retiring a target that existed in managed history.
 - Delete the source file from `home/` only after the removal is represented in chezmoi.
 - Run `chezmoi apply` so chezmoi removes the deployed target.
 - Do not delete the deployed file directly from `~/`, `~/.config`, or similar target paths unless the documented chezmoi removal has already been recorded and applied.
@@ -184,6 +185,7 @@ Never set `HOMEBREW_FOO=1` before `brew bundle` — that would result in `ENV["H
 - Never remove rules without explicit user confirmation.
 - Keep this file concise — if it grows beyond ~200 lines of rules (excluding vault context), propose splitting into topic-specific files.
 - When in doubt, append a new rule rather than silently adopting a convention that isn't written down.
+- When reviewing recent history in this repo, if none of the last 5 commits are from `upstream/main`, suggest loading the `rebase-upstream` skill.
 
 <!-- BEGIN BEADS INTEGRATION -->
 ## Issue Tracking with bd (beads)

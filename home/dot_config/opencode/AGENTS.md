@@ -58,6 +58,8 @@ Four specialised subagents handle common delegated tasks. Use them instead of do
 
 When subagent delegations are needed at session close (config changes, memory updates, daily note logging), run them in sequence rather than inline: delegate each concern to its subagent one at a time, wait for each to complete, then proceed to the next. This keeps the primary agent's context clean and each concern isolated.
 
+If a delegated exploration task aborts or returns no useful result for a bounded repo-inspection task, fall back to direct `glob`, `grep`, `read`, and targeted `bash` calls instead of retrying the same broad delegation blindly.
+
 ---
 
 ## Custom commands and subtask isolation
@@ -183,6 +185,10 @@ When OpenCode spawns a shell, it sets `OPENCODE=1` natively. The `.zshenv` PATH 
 Before committing, run `git diff --staged` and make an objective assessment of whether the change is both atomic and in-scope based on the context of the request. Do not commit unrelated changes that happened to be modified in the working tree.
 
 Commit messages use semantic commit format: `type(scope): description`. Types: `feat`, `fix`, `chore`. Scope is optional but use it when relevant. Always check `git log --oneline` before committing to match the repo's existing style.
+
+## Git editor suppression
+
+When running git commands that may open an editor (e.g. `git rebase --continue`, `git commit` without `-m`, `git merge`), always set `GIT_EDITOR="true"` to prevent interactive editors from blocking the shell. This applies to any git operation that could invoke `$EDITOR`.
 
 ---
 
