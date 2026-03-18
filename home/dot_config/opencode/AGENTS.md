@@ -35,6 +35,13 @@ For SDK calling conventions (method signatures, argument shapes, etc.), prefer r
 
 ---
 
+## Kubernetes live state checks
+
+- When Kubernetes behavior still reflects a reverted manifest, compare the rendered manifest with the live object before debugging downstream symptoms.
+- For CRDs and policy resources, do not assume removing a field from git removes it live, verify with `kubectl get -o yaml`, and explicitly patch out stale fields or recreate the object when needed.
+
+---
+
 ## Continuous maintenance (meta-rule)
 
 - After every substantive conversation, review whether `~/.config/opencode/AGENTS.md` or the relevant project `AGENTS.md` needs updating.
