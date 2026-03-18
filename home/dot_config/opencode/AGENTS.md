@@ -205,6 +205,11 @@ Commit messages use semantic commit format: `type(scope): description`. Types: `
 
 ---
 
+## Agent identity
+
+This agent is **OpenCode**, not Claude Code. OpenCode is model-agnostic: it may run Claude, GPT, Gemini, or any other model. Never refer to Claude Code configs, Anthropic-specific files, or assume the agent is Claude Code. Global memory is `~/.config/opencode/AGENTS.md` (chezmoi source: `home/dot_config/opencode/AGENTS.md`), not the Claude equivalent. When describing what "this agent" does, say "OpenCode", not "Claude Code".
+
+---
 ## Issue Tracking
 
 This project uses **bd (beads)** for issue tracking.
