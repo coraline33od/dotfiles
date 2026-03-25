@@ -33,6 +33,8 @@ If a documentation site does not render usefully via WebFetch, clone the source 
 
 For SDK calling conventions (method signatures, argument shapes, etc.), prefer real call sites in existing plugins or examples over generated type declarations. Generated types may reflect an internal calling convention that differs from what external callers use. For OpenCode plugins, read concrete plugin implementations in the source repo (e.g. `packages/slack/src/index.ts`, `packages/github/src/index.ts`) rather than generated SDK type files. When the docs or types are ambiguous, a working plugin in the same repo is the ground truth.
 
+Before calling a tool you do not use often, verify its current input schema first: check required fields, allowed enum values, and any documented parameter constraints in the tool definition or authoritative docs. Do not guess option names or reuse values from a similar tool without verifying them.
+
 ---
 
 ## Kubernetes live state checks
