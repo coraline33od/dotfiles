@@ -150,6 +150,11 @@ When `chezmoi apply` triggers a brew bundle run (via an onchange script), treat 
 
 Never suggest the user accept a limitation, take a shortcut, or move on when a proper solution may exist. Keep investigating until the problem is actually solved. Suggesting workarounds as a final answer is not acceptable.
 
+## Response continuity
+
+- During any active planning or execution workflow, never return an empty assistant response.
+- If blocked, uncertain, or waiting on a tool result, send a brief status update that states what happened and the immediate next step.
+
 ---
 
 ## Browsing code in git repositories
