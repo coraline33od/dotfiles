@@ -201,7 +201,11 @@ When OpenCode spawns a shell, it sets `OPENCODE=1` natively. The `.zshenv` PATH 
 
 ## Commit discipline
 
-Before committing, run `git diff --staged` and make an objective assessment of whether the change is both atomic and in-scope based on the context of the request. Do not commit unrelated changes that happened to be modified in the working tree.
+Before committing, review staged changes and make an objective assessment of whether the change is both atomic and in-scope based on the context of the request. Do not commit unrelated changes that happened to be modified in the working tree.
+
+- Start commit review with `git diff --staged --stat` to size the change.
+- If the staged diff is large, review with targeted commands like `git diff --staged -- <path>` for the highest-risk files first, instead of dumping a full staged diff into context.
+- If the staged diff is small enough to inspect safely, run `git diff --staged` for full-content review.
 
 - If a file is untracked, do not rely on `git diff -- <path>` for review, stage it first, then review with `git diff --staged -- <path>` so new-file content is visible before commit.
 
