@@ -72,6 +72,8 @@ When subagent delegations are needed at session close (config changes, memory up
 
 If a delegated exploration task aborts or returns no useful result for a bounded repo-inspection task, fall back to direct `glob`, `grep`, `read`, and targeted `bash` calls instead of retrying the same broad delegation blindly.
 
+- When the user requests multiple independent subagent reviews in plan or retrospective workflows, delegate those reviews in parallel for speed; use sequential delegation only when one review depends on another or when a session-close rule requires strict ordering.
+
 ---
 
 ## Custom commands and subtask isolation
