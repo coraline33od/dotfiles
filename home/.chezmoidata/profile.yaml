@@ -1,13 +1,13 @@
 ---
 profile:
   git:
-    name: "Chip Wolf"
-    email: "hello@chipwolf.uk"
-    githubUser: "chipwolf"
+    name: "coraline33od"
+    email: "61751247+coraline33od@users.noreply.github.com"
+    githubUser: "coraline33od"
     githubRepo: "dotfiles"
     # signingKey: "0x4C90101E11349775"
   codespaces:
-    gitName: "Chip Wolf ‮"
+    gitName: "coraline33od"
   windows:
     # Linux username for WSL Ubuntu (cloud-init user, wsl.conf default). Lowercase. Required on Windows; bootstrap/WSL scripts fail apply if empty.
-    wslUser: "wolf"
+    wslUser: "coraline33od"

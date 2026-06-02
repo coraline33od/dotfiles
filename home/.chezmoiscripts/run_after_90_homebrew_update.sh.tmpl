@@ -10,6 +10,8 @@ if command -v brew >/dev/null 2>&1; then
     exit 0
   fi
 
+  unset HOMEBREW_CASK_OPTS
+
   brew update
   brew doctor || true
   brew upgrade --cask --greedy
