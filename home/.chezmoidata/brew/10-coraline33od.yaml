@@ -1,0 +1,12 @@
+---
+# yaml-language-server: $schema=../../../schemas/brew-overlays.schema.json
+brew:
+  overlays:
+    coraline33od:
+      conditions:
+        - { kind: env, name: CI, op: unset }
+      packages:
+        - type: cask
+          name: tailscale # mesh vpn
+          conditions:
+            - { kind: os, op: is, value: mac }
